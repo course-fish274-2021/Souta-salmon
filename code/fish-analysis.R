@@ -28,3 +28,13 @@ ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
 
 
 
+
+
+
+
+
+
+
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram()
+
