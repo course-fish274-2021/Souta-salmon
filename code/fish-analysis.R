@@ -10,3 +10,13 @@ fish_data_cat <- fish_data %>%
 #exercise 2
 
 
+
+
+
+
+
+
+
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram()
+
