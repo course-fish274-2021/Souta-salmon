@@ -20,21 +20,8 @@ fish_data_cat <- fish_data %>%
 install.packages("ggplot")
 library("ggplot2")
 
-ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
-  geom_histogram()
-
-
-
-
-
-
-
-
-
-
-
 
 
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
-  geom_histogram()
+  geom_histogram(bins = 80)
 
