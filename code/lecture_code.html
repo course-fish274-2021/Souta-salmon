@@ -183,6 +183,9 @@ pre code {
 </ol>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 </div>
+<div id="chunks" class="section level1">
+<h1>chunks</h1>
+</div>
 <div id="big" class="section level1">
 <h1>Big</h1>
 <div id="smaller" class="section level2">
@@ -190,6 +193,27 @@ pre code {
 <div id="more-smaller" class="section level3">
 <h3>more smaller</h3>
 </div>
+</div>
+</div>
+<div id="insert-r-ctrlaltl" class="section level1">
+<h1>insert R (Ctrl+Alt+l)</h1>
+<div id="adding-messagefalse-cleans-up-doc" class="section level2">
+<h2>adding message=FALSE cleans up Doc</h2>
+<pre class="r"><code>library(dplyr)
+library(ggplot2)</code></pre>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<pre class="r"><code>data &lt;- read.csv(&quot;https://ndownloader.figshare.com/files/2292172&quot;)
+head(data)</code></pre>
+<pre><code>##   record_id month day year plot_id species_id sex hindfoot_length weight
+## 1         1     7  16 1977       2         NL   M              32     NA
+## 2         2     7  16 1977       3         NL   M              33     NA
+## 3         3     7  16 1977       2         DM   F              37     NA
+## 4         4     7  16 1977       7         DM   M              36     NA
+## 5         5     7  16 1977       3         DM   M              35     NA
+## 6         6     7  16 1977       1         PF   M              14     NA</code></pre>
+<p>The data includes 49 species.</p>
 </div>
 </div>
 
