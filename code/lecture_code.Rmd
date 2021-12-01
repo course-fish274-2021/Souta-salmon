@@ -44,7 +44,20 @@ head(data)
 
 The data includes `r length(unique(data$species_id))` species.
 
+## Analysis
 
+Get the time-series of counts for all species.
+
+```{r, message=FALSE, echo=FALSE, cache=TRUE}
+time_series <-
+  data %>%
+  group_by(species_id, year) %>%
+  summarize(count = n()) %>%
+  filter(species_id %in% c('DM', 'DO', 'DS')) %>%
+  na.omit()
+
+knitr::kable(head(time_series))
+```
 
 
 
