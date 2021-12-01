@@ -37,7 +37,7 @@ library(ggplot2)
 
 ## Data
 
-```{r}
+```{r, cache=TRUE}
 data <- read.csv("https://ndownloader.figshare.com/files/2292172")
 head(data)
 ```
