@@ -4,27 +4,17 @@ author: "Souta Saechao"
 date: "11/30/2021"
 output: html_document
 ---
+## Concept
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+Exploration of population dynamic patterns at **The Portal Project**.
+How do counts of rodents like *Dipodomys* species change through time?
 
-## R Markdown
+In this document I will:
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+1. Load data from the [Portal Project Teaching Database](http://figshare.com/articles/Portal_Project_Teaching_Database/1314459)
+2. Process it into population time series
+3. And make initial visualizations
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
