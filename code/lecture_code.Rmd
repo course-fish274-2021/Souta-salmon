@@ -21,15 +21,26 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 
 
-
+# chunks
 
 # Big
 ## smaller
 ### more smaller
 
+# insert R (Ctrl+Alt+l)
+## adding message=FALSE cleans up Doc 
 
+```{r, message=FALSE}
+library(dplyr)
+library(ggplot2)
+```
 
+## Data
 
+```{r}
+data <- read.csv("https://ndownloader.figshare.com/files/2292172")
+head(data)
+```
 
 
 
