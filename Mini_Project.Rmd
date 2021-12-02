@@ -7,7 +7,7 @@ output: html_document
 
 ## Concepts
 
-Managing salmon for wildlife: do fisheries limit salmon consumption by bears in small Alaskan streams?
+Does managing fisheries for wildlife limit salmon consumption by bears in small Alaskan streams?
 
 In this document I will:
 
@@ -28,6 +28,11 @@ data <- read.csv("data/Managing_salmon_for_wildlife_Data.csv")
 head(data)
 ```
 
+```{r}
+![screenshot](https://images-global.nhst.tech/image/ODMzT0MxbGgzanhycFMzbGdvSnFGUkZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/50df08e2408cfb7ead6c0e2794b82dc0?image_version=800)
+```
+
+
 
 
 ```{r setup, include=FALSE}
@@ -40,16 +45,13 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
 
 ## Including Plots
 
+
+
+
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
+`
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
