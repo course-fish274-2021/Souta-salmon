@@ -28,6 +28,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ### more smaller
 
 # insert R (Ctrl+Alt+l)
+<<<<<<< HEAD
 ## adding message=FALSE cleans up Doc 
 
 ```{r, message=FALSE}
@@ -58,10 +59,24 @@ time_series <-
 
 knitr::kable(head(time_series))
 ```
+=======
+>>>>>>> 2fffd66b33b68e4b5eda49d5c4459d2c4e53d81a
 
+```{r, message=FALSE}
+library(dplyr)
+library(ggplot2)
+```
 
+## Data
 
+<<<<<<< HEAD
 ```{r setup, include = FALSE}
+=======
+```{r}
+data <- read.csv("https://ndownloader.figshare.com/files/2292172")
+head(data)
+```
+>>>>>>> 2fffd66b33b68e4b5eda49d5c4459d2c4e53d81a
 
 
 smaller <- diamonds %>% 
