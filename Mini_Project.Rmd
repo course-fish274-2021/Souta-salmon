@@ -20,13 +20,16 @@ In this document I will:
 
 ```{r cache=TRUE}
 data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
-head()
+head(data, 73)
 ```
+
 
 ```{r, cache=FALSE}
 library(dplyr)
 library(ggplot2)
 ```
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -39,6 +42,7 @@ When you click the **Knit** button a document will be generated that includes bo
 
 
 ## Including Plots
+
 
 You can also embed plots, for example:
 
