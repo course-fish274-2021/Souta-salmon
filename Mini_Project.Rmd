@@ -7,50 +7,48 @@ output: html_document
 
 ## Concepts
 
-Does managing fisheries for wildlife limit salmon consumption by bears in small Alaskan streams?
+Does managing fisheries for wildlife limit salmon consumption by bears in Alaskan?
 
 In this document I will:
 
 1. Load data from the [Managing salmon for wildlife do fisheries limit salmon consumption by bears in small Alaskan streams dataset](https://figshare.com/articles/dataset/Managing_salmon_for_wildlife_do_fisheries_limit_salmon_consumption_by_bears_in_small_Alaskan_streams_/10315925)
-2. Process it into population time series
+2. Process it into population add image 
 3. And make initial visualizations
 
-```{r, message=FALSE}
+
+## import Data
+
+```{r cache=TRUE}
+data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
+head()
+```
+
+```{r, cache=FALSE}
 library(dplyr)
 library(ggplot2)
 ```
-
-## Data
-
-
-```{r, cache=TRUE}
-data <- read.csv("data/Managing_salmon_for_wildlife_Data.csv")
-head(data)
-```
-
-```{r}
-![screenshot](https://images-global.nhst.tech/image/ODMzT0MxbGgzanhycFMzbGdvSnFGUkZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/50df08e2408cfb7ead6c0e2794b82dc0?image_version=800)
-```
-
-
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 
 ## Including Plots
 
-
-
 You can also embed plots, for example:
 
 `
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## adding image screen shot
+
+![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
+
+![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
+
