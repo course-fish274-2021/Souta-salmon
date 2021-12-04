@@ -25,7 +25,7 @@ library(ggplot2)
 
 ```{r cache=TRUE}
 data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
-head(data)
+head(data, 73)
 ```
 
 ```{r setup, include=FALSE}
