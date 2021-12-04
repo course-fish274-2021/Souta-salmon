@@ -31,7 +31,12 @@ head(data, 73)
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## including plots
 
+```{r}
+ggplot(data = Managing_salmon_for_wildlife_Data.csv, mapping = aes(x = Year)) +
+  geom_bar()
+```
 
 ## adding image screen shot
 
