@@ -7,21 +7,13 @@ output: html_document
 
 ## Concepts
 
-Does managing fisheries for wildlife limit salmon consumption by bears in Alaskan?
+Does managing fisheries for wildlife limit salmon consumption by bears in Alaska?
 
 In this document I will:
 
 1. Load data from the [Managing salmon for wildlife do fisheries limit salmon consumption by bears in small Alaskan streams dataset](https://figshare.com/articles/dataset/Managing_salmon_for_wildlife_do_fisheries_limit_salmon_consumption_by_bears_in_small_Alaskan_streams_/10315925)
 2. Process it into population add image 
 3. And make initial visualizations
-
-
-## import Data
-
-```{r cache=TRUE}
-data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
-head(data, 73)
-```
 
 
 ```{r, cache=FALSE}
@@ -35,24 +27,69 @@ library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Alaskan Bear
 
-For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
+
+## import Data
+
+```{r cache=TRUE}
+data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
+data
+```
+
+
+
+```{r}
+summary(data)
+```
 
 ## Including Plots
 
 
-You can also embed plots, for example:
+```{r}
+ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
+  geom_boxplot()
+```
 
-`
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
+  geom_boxplot()
+```
 
 
-## adding image screen shot
+
+```{r}
+ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
+  geom_point()
+```
+
+
+```{r}
+ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
+  geom_point()
+```
+
+
+```{r}
+ggplot(data, aes(x=Year, y=Biomass.Available..kg., color = Site)) +
+  geom_point()
+```
+
+
+```{r}
+ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site)) +
+  geom_point()
+```
+
+
+## Copper River Sockeye
 
 ![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
 
-![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
+
+
 
