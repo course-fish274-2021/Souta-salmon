@@ -38,6 +38,13 @@ ggplot(data = Managing_salmon_for_wildlife_Data.csv, mapping = aes(x = Year)) +
   geom_bar()
 ```
 
+```{r}
+ggplot(data = Managing_salmon_for_wildlife_Data.csv, mapping = aes(y = Biomass.Consumed..kg.)) +
+  geom_bar()
+```
+
+
+
 ## adding image screen shot
 
 ![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
