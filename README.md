@@ -27,7 +27,7 @@ library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+## Bears in Alaskan
 ![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
 
 ## import Data
@@ -79,7 +79,7 @@ ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site
   geom_point()
 ```
 
-## adding image screen shot
+## Copper River Sockeye
 
 ![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
 
