@@ -7,7 +7,7 @@ output: html_document
 
 ## Concepts
 
-Does managing fisheries for wildlife limit salmon consumption by bears in Alaskan?
+Does managing fisheries for wildlife limit salmon consumption by bears in Alaska?
 
 In this document I will:
 
