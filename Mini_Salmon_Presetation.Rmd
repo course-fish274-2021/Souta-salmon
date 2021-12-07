@@ -28,8 +28,8 @@ library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Alaskan Bear from Getty Images
-![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
+## Alaskan Bear
+![image Gettyimage](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
 ## Data 
 
 ```{r, echo=FALSE}
@@ -45,7 +45,7 @@ summary(data)
 
 ## Box Plot Year, Biomass Comsumed
 
-```{r, echo=FALSE}
+```{r, cache=TRUE, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
   geom_boxplot()
 ```
@@ -119,7 +119,7 @@ ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site
 
 ## Biomass Available histogram
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, error=FALSE}
 ggplot(data, aes(x= Biomass.Available..kg., fill=Site, stat="count",))+
   geom_histogram()
 ```
@@ -151,8 +151,8 @@ p <- data %>%
 p
 ```
 
-## Copper River Sockeye
-![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
+## Copper River Sockeye 
+![image alaskatourjobs](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
 
 
 ## Finding
