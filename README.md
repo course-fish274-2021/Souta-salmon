@@ -64,6 +64,14 @@ ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
 
 
 ```{r}
+ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
+  geom_point(size = 3, color = "red", alpha = .5)
+```
+
+
+
+
+```{r}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
