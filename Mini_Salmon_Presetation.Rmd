@@ -25,7 +25,7 @@ library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Alaskan Bear
+## Alaskan Bear from Getty Images
 ![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
 ## import Data
 
@@ -34,35 +34,37 @@ data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
 data
 ```
 
-
+## Summary
 ```{r}
 summary(data)
 ```
-## Slide with Plot
+## Box Plot Biomass Comsumed
 
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
   geom_boxplot()
 ```
-
+## Box Plot Biomass Available
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
   geom_boxplot()
 ```
-
+## Plots Average Percentage Eaten
 ```{r}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
   geom_point()
 ```
-
+## Biomass Consumed mean
 ```{r}
 data %>% filter(Biomass.Consumed..kg. > mean(Biomass.Consumed..kg., na.rm = TRUE))
 ```
-
+## Scale point size, color
 ```{r}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
   geom_point(size = 3, color = "red", alpha = .5)
 ```
+
+## Scale log plot
 
 ```{r}
 
@@ -72,39 +74,43 @@ ggplot(data, aes(x = Year, y = Biomass.Consumed..kg.)) +
   scale_x_log10()
 
 ```
-
+## facet wrap
 ```{r}
 ggplot(data, aes(x = Biomass.Consumed..kg., y = Biomass.Available..kg.)) +
   geom_point(size = 3, alpha = .5) + scale_x_log10()+scale_y_log10()+
   facet_wrap(~Year)
 ```
-
+## Scatter plot Year, Biomass Comsumed
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
+## Scatter plot Year, Biomass Available
 
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., color = Site)) +
   geom_point()
 ```
+## Scatter plot Biomass Available, Biomass Comsumed
 
 ```{r}
 ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
+## Biomass Available histogram
 
 ```{r}
 ggplot(data, aes(x= Biomass.Available..kg., fill=Site, stat="count",))+
   geom_histogram()
 ```
+## Biomass Comsumed histogram
 
 ```{r}
 ggplot(data, aes(x= Biomass.Consumed..kg., fill=Site, stat="count",))+
   geom_histogram()
 ```
 
-## Time line series
+## Time line series Biomass Available
 
 ```{r}
 p <- data %>%
@@ -113,6 +119,8 @@ p <- data %>%
     ylab("Biomass.Available..kg.")
 p
 ```
+
+## Time line series Biomass Consumed
 
 ```{r}
 p <- data %>%
