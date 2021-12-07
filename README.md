@@ -22,7 +22,6 @@ library(ggplot2)
 ```
 
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -32,60 +31,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## import Data
 
-```{r cache=TRUE}
-data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
-data
-```
 
-```{r}
-summary(data)
-```
 
 ## Including Plots
 
 
-```{r}
-ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
-  geom_boxplot()
-```
-
-
-```{r}
-ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
-  geom_boxplot()
-```
-
-
-
-```{r}
-ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
-  geom_point()
-```
-
-
-```{r}
-ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
-  geom_point(size = 3, color = "red", alpha = .5)
-```
-
-
-
-
-```{r}
-ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
-  geom_point()
-```
-
-
-```{r}
-ggplot(data, aes(x=Year, y=Biomass.Available..kg., color = Site)) +
-  geom_point()
-```
-
-```{r}
-ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site)) +
-  geom_point()
-```
 
 ## Copper River Sockeye
 
