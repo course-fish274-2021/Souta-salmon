@@ -91,6 +91,10 @@ ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site
 
 ![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
 
+## Citation 
+
+Lincoln, A., Hilborn, R., Wirsing, A. J., & Quinn, T. P.. (2019). Managing salmon for wildlife: do fisheries limit salmon consumption by bears in small Alaskan streams? (Version 1). figshare. https://doi.org/10.6084/m9.figshare.10315925.v1 ([]) 
+
 
 
 
