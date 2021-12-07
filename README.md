@@ -21,30 +21,52 @@ library(dplyr)
 library(ggplot2)
 ```
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## Alaskan Bear
 
-## Bears in Alaskan
 ![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
 
 ## import Data
 
+```{r cache=TRUE}
+data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
+data
+```
 
 
-## Including Plots
-
-
-
-## Copper River Sockeye
+## adding image screen shot
 
 ![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
 
+
+![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
+
+```{r}
+summary(data)
+```
+
+## Including Plots
+
+```{r}
+ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
+  geom_boxplot()
+```
+```{r}
+ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
+  geom_boxplot()
+```
+```{r}
+ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
+  geom_point()
+```
+```{r}
+ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
+  geom_point()
+```
+
 ## Citation 
 
-Lincoln, A., Hilborn, R., Wirsing, A. J., & Quinn, T. P.. (2019). Managing salmon for wildlife: do fisheries limit salmon consumption by bears in small Alaskan streams? (Version 1). figshare. https://doi.org/10.6084/m9.figshare.10315925.v1 ([]) 
-
-
-
+Lincoln, A., Hilborn, R., Wirsing, A. J., & Quinn, T. P.. (2019). Managing salmon for wildlife: do fisheries limit salmon consumption by bears in small Alaskan streams? (Version 1). figshare. https://doi.org/10.6084/m9.figshare.10315925.v1 ([])
 
