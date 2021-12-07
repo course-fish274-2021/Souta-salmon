@@ -5,21 +5,24 @@ date: "12/6/2021"
 output: ioslides_presentation
 ---
 
-## Concept bullet points
+## Concept 
+
 - Does managing fisheries for wildlife limit salmon consumption by bears in Alaska?
-- comparing Graph
+
+- comparing Graph process it into population
+
+- Include visual images 
+
 - Findings
 
-In this document I will:
-1. Load data from the [Managing salmon for wildlife do fisheries limit salmon consumption by bears in small Alaskan streams dataset](https://figshare.com/articles/dataset/Managing_salmon_for_wildlife_do_fisheries_limit_salmon_consumption_by_bears_in_small_Alaskan_streams_/10315925)
-
-2.Process it into population add image and make initial visualizations
+## Library package 
 
 ```{r, cache=FALSE}
 library(dplyr)
 library(ggplot2)
 ```
 
+## knitr opts
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -27,44 +30,54 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Alaskan Bear from Getty Images
 ![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
-## import Data
+## Data 
 
 ```{r cache=TRUE}
 data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
 data
 ```
 
-## Summary
+## Summary data
+
 ```{r}
 summary(data)
 ```
-## Box Plot Biomass Comsumed
+
+## Box Plot Year, Biomass Comsumed
 
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
   geom_boxplot()
 ```
-## Box Plot Biomass Available
+
+## Box Plot Year, Biomass Available
+
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
   geom_boxplot()
 ```
+
 ## Plots Average Percentage Eaten
+
 ```{r}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
   geom_point()
 ```
-## Biomass Consumed mean
+
+## Pipe filter Biomass Consumed mean
+
 ```{r}
 data %>% filter(Biomass.Consumed..kg. > mean(Biomass.Consumed..kg., na.rm = TRUE))
 ```
-## Scale point size, color
+
+## Scale point size, color, alpha
+
 ```{r}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
   geom_point(size = 3, color = "red", alpha = .5)
 ```
 
-## Scale log plot
+## Scale log scatter plot
 
 ```{r}
 
@@ -74,35 +87,43 @@ ggplot(data, aes(x = Year, y = Biomass.Consumed..kg.)) +
   scale_x_log10()
 
 ```
-## facet wrap
+
+## facet wrap scale log scatter plot
+
 ```{r}
 ggplot(data, aes(x = Biomass.Consumed..kg., y = Biomass.Available..kg.)) +
   geom_point(size = 3, alpha = .5) + scale_x_log10()+scale_y_log10()+
   facet_wrap(~Year)
 ```
+
 ## Scatter plot Year, Biomass Comsumed
+
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
+
 ## Scatter plot Year, Biomass Available
 
 ```{r}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., color = Site)) +
   geom_point()
 ```
+
 ## Scatter plot Biomass Available, Biomass Comsumed
 
 ```{r}
 ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
+
 ## Biomass Available histogram
 
 ```{r}
 ggplot(data, aes(x= Biomass.Available..kg., fill=Site, stat="count",))+
   geom_histogram()
 ```
+
 ## Biomass Comsumed histogram
 
 ```{r}
@@ -130,11 +151,13 @@ p <- data %>%
 p
 ```
 
+## Copper River Sockeye
+![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
+
+
 ## Finding
 This presentation shows that bears benefit from fisheries management contribution in Alaska. Data indicated an increased food supply for Bears from 1997 through 2018, and my finding supports that fisheries management data show a trending uptick of increased biomass in multiple creeks/ponds. Furthermore, we need to secure fundings to support research and fisheries management to continue their studies and maintain salmon species in Alaska and the surrounding tributary.
 
-## Copper River Sockeye
-![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
 
 ## Citation 
 
