@@ -5,14 +5,15 @@ date: "12/6/2021"
 output: ioslides_presentation
 ---
 
-## Concepts
+## Concept bullet points
 - Does managing fisheries for wildlife limit salmon consumption by bears in Alaska?
+- comparing Graph
+- Findings
+
 In this document I will:
 1. Load data from the [Managing salmon for wildlife do fisheries limit salmon consumption by bears in small Alaskan streams dataset](https://figshare.com/articles/dataset/Managing_salmon_for_wildlife_do_fisheries_limit_salmon_consumption_by_bears_in_small_Alaskan_streams_/10315925)
 
-Process it into population add image and make initial visualizations
-- comparing Graph
-- This presentation shows that bears benefit from fisheries management contribution in Alaska. Data indicated an increased food supply for Bears from 1997 through 2018, and my finding supports that fisheries management data show a trending uptick of increased biomass in multiple creeks/ponds. Furthermore, we need to secure fundings to support research and fisheries management to continue their studies and maintain salmon species in Alaska and the surrounding tributary.
+2.Process it into population add image and make initial visualizations
 
 ```{r, cache=FALSE}
 library(dplyr)
@@ -32,6 +33,8 @@ knitr::opts_chunk$set(echo = TRUE)
 data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
 data
 ```
+
+
 ```{r}
 summary(data)
 ```
@@ -118,6 +121,9 @@ p <- data %>%
     ylab("Biomass.Consumed..kg.")
 p
 ```
+
+## Finding
+This presentation shows that bears benefit from fisheries management contribution in Alaska. Data indicated an increased food supply for Bears from 1997 through 2018, and my finding supports that fisheries management data show a trending uptick of increased biomass in multiple creeks/ponds. Furthermore, we need to secure fundings to support research and fisheries management to continue their studies and maintain salmon species in Alaska and the surrounding tributary.
 
 ## Copper River Sockeye
 ![image](https://www.alaskatourjobs.com/wp-content/uploads/2017/06/Copper_River_Salmon_Facts.jpg)
