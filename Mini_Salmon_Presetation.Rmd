@@ -17,7 +17,7 @@ output: ioslides_presentation
 
 ## Library package 
 
-```{r, cache=FALSE}
+```{r, cache=FALSE , include=FALSE}
 library(dplyr)
 library(ggplot2)
 ```
@@ -32,54 +32,54 @@ knitr::opts_chunk$set(echo = TRUE)
 ![image](https://d3i6fh83elv35t.cloudfront.net/static/2018/11/fat-bears_GettyImages-966223700-1024x683.jpg)
 ## Data 
 
-```{r cache=TRUE}
+```{r, echo=FALSE}
 data <- read.csv("Managing_salmon_for_wildlife_Data.csv")
 data
 ```
 
 ## Summary data
 
-```{r}
+```{r, echo=FALSE}
 summary(data)
 ```
 
 ## Box Plot Year, Biomass Comsumed
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
   geom_boxplot()
 ```
 
 ## Box Plot Year, Biomass Available
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
   geom_boxplot()
 ```
 
 ## Plots Average Percentage Eaten
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
   geom_point()
 ```
 
 ## Pipe filter Biomass Consumed mean
 
-```{r}
+```{r, echo=FALSE}
 data %>% filter(Biomass.Consumed..kg. > mean(Biomass.Consumed..kg., na.rm = TRUE))
 ```
 
 ## Scale point size, color, alpha
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
   geom_point(size = 3, color = "red", alpha = .5)
 ```
 
 ## Scale log scatter plot
 
-```{r}
+```{r, echo=FALSE}
 
 ggplot(data, aes(x = Year, y = Biomass.Consumed..kg.)) +
   geom_point(size = 3, color = "blue", alpha = 0.5) +
@@ -90,7 +90,7 @@ ggplot(data, aes(x = Year, y = Biomass.Consumed..kg.)) +
 
 ## facet wrap scale log scatter plot
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x = Biomass.Consumed..kg., y = Biomass.Available..kg.)) +
   geom_point(size = 3, alpha = .5) + scale_x_log10()+scale_y_log10()+
   facet_wrap(~Year)
@@ -98,42 +98,42 @@ ggplot(data, aes(x = Biomass.Consumed..kg., y = Biomass.Available..kg.)) +
 
 ## Scatter plot Year, Biomass Comsumed
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
 
 ## Scatter plot Year, Biomass Available
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., color = Site)) +
   geom_point()
 ```
 
 ## Scatter plot Biomass Available, Biomass Comsumed
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
 
 ## Biomass Available histogram
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x= Biomass.Available..kg., fill=Site, stat="count",))+
   geom_histogram()
 ```
 
 ## Biomass Comsumed histogram
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data, aes(x= Biomass.Consumed..kg., fill=Site, stat="count",))+
   geom_histogram()
 ```
 
 ## Time line series Biomass Available
 
-```{r}
+```{r, echo=FALSE}
 p <- data %>%
   ggplot( aes(x=Year, y=Biomass.Available..kg.)) +
     geom_line(color="Green") +
@@ -143,7 +143,7 @@ p
 
 ## Time line series Biomass Consumed
 
-```{r}
+```{r, echo=FALSE}
 p <- data %>%
   ggplot( aes(x=Year, y= Biomass.Consumed..kg.)) +
     geom_line(color="Red") +
