@@ -26,8 +26,7 @@ Humans impact Bear habitat.(waterways, wetlands)
 Manage Salmon for wildlife help maintain natures food web. Which is a network of complex interactions formed by the feeding relationships in various organisms in an ecosystem.
 
 -Natural exchange
-In nature, Bear's avoid human contact. Low biomass levels unavailable bears are 
-a force to scavenge near humans’ territory when food sources become scarce.
+In nature, Bear's avoid human contact. When biomass levels and other food sources become scarce Bears can scavenge nearby humans' territory. 
 
 
 ## Alaskan Bear
@@ -60,8 +59,6 @@ a force to scavenge near humans’ territory when food sources become scarce.
  Biomass Consumed
 
  Biomass Available
-
- Biomass percentage
 
  Average Percentage Eaten
 
