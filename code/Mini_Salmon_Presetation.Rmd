@@ -100,14 +100,14 @@ ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
 ```
 
 ## Pipe filter Biomass Consumed mean
-description of Biomass consumed and mean for each variable
+Description of Biomass consumed and mean for each variable
 
 ```{r, echo=FALSE}
 data %>% filter(Biomass.Consumed..kg. > mean(Biomass.Consumed..kg., na.rm = TRUE))
 ```
 
 ## Scale point size, color, alpha
-scale able make changes with size and color(red), alpha, 
+Scale able make changes with size and color(red), alpha, 
 
 ```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
@@ -115,7 +115,7 @@ ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
 ```
 
 ## Scale log scatter plot
-able scale log scatter plot, change size color(blue), alpha 
+Able scale log scatter plot, change size color(blue), alpha 
 
 ```{r, echo=FALSE}
 
@@ -173,7 +173,7 @@ ggplot(data, aes(x= Biomass.Consumed..kg., fill=Site, stat="count",))+
 ```
 
 ## Time line series Biomass Available
-pipe plot of Year, Biomass available also add color
+Pipe plot of Year, Biomass available also add color
 ```{r, echo=FALSE}
 p <- data %>%
   ggplot( aes(x=Year, y=Biomass.Available..kg.)) +
@@ -183,7 +183,7 @@ p
 ```
 
 ## Time line series Biomass Consumed
-pipe plot of Year, Biomass consumed also add color
+Pipe plot of Year, Biomass consumed also add color
 ```{r, echo=FALSE}
 p <- data %>%
   ggplot( aes(x=Year, y= Biomass.Consumed..kg.)) +
