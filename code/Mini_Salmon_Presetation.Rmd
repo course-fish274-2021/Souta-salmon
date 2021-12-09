@@ -76,8 +76,7 @@ summary(data)
 ```
 
 ## Box Plot Year, Biomass Comsumed
-
- 2010 Largest amount of biomass consumed 
+2010 Largest amount of biomass consumed 
 
 ```{r, cache=TRUE, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
@@ -85,8 +84,7 @@ ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., group = Year)) +
 ```
 
 ## Box Plot Year, Biomass Available
-
- 1997 show large amount of biomass available
+1997 show large amount of biomass available
 
 ```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
@@ -94,8 +92,7 @@ ggplot(data, aes(x=Year, y=Biomass.Available..kg., group = Year)) +
 ```
 
 ## Plots Average Percentage Eaten
-
- 2011 highest percent eaten at (A creek) looking at the color site.
+2011 highest percent eaten at (A creek) looking at the color site.
 
 ```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
@@ -103,16 +100,14 @@ ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
 ```
 
 ## Pipe filter Biomass Consumed mean
-
- description of Biomass consumed and mean for each variable
+description of Biomass consumed and mean for each variable
 
 ```{r, echo=FALSE}
 data %>% filter(Biomass.Consumed..kg. > mean(Biomass.Consumed..kg., na.rm = TRUE))
 ```
 
 ## Scale point size, color, alpha
-
- scale able make changes with size and color(red), alpha, 
+scale able make changes with size and color(red), alpha, 
 
 ```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
@@ -120,8 +115,7 @@ ggplot(data, aes(x=Year, y=Average.Percentage.Eaten, color = Site)) +
 ```
 
 ## Scale log scatter plot
-
- able scale log scatter plot, change size color(blue), alpha 
+able scale log scatter plot, change size color(blue), alpha 
 
 ```{r, echo=FALSE}
 
@@ -133,8 +127,7 @@ ggplot(data, aes(x = Year, y = Biomass.Consumed..kg.)) +
 ```
 
 ## facet wrap scale log scatter plot
-
- Facet wrap scale log scatter plot showing separate year for biomass consumed 
+Facet wrap scale log scatter plot showing separate year for biomass consumed 
 and biomass available
 
 ```{r, echo=FALSE}
@@ -144,16 +137,14 @@ ggplot(data, aes(x = Biomass.Consumed..kg., y = Biomass.Available..kg.)) +
 ```
 
 ## Scatter plot Year, Biomass Comsumed
-
- 2011-2015 large amount of biomass consumed Hansen Creek
+2011-2015 large amount of biomass consumed Hansen Creek
 ```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
 ```
 
 ## Scatter plot Year, Biomass Available
-2006 show that Hansen Creek has the most abundant biomass we can follow
-the trend 
+2006 show that Hansen Creek has the most abundant biomass  
 ```{r, echo=FALSE}
 ggplot(data, aes(x=Year, y=Biomass.Available..kg., color = Site)) +
   geom_point()
@@ -167,7 +158,7 @@ ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site
 ```
 
 ## Biomass Available histogram
- Count of biomass available
+ Count of biomass available add # bins
 ```{r, echo=FALSE}
 ggplot(data, aes(x= Biomass.Available..kg., fill=Site, stat="count",))+
   geom_histogram(bins = 30)
@@ -175,14 +166,14 @@ ggplot(data, aes(x= Biomass.Available..kg., fill=Site, stat="count",))+
 
 
 ## Biomass Comsumed histogram
- Count of biomass consumed
+ Count of biomass consumed and added # bin
 ```{r,  echo=FALSE}
 ggplot(data, aes(x= Biomass.Consumed..kg., fill=Site, stat="count",))+
   geom_histogram(bins = 30)
 ```
 
 ## Time line series Biomass Available
-
+pipe plot of Year, Biomass available also add color
 ```{r, echo=FALSE}
 p <- data %>%
   ggplot( aes(x=Year, y=Biomass.Available..kg.)) +
@@ -192,7 +183,7 @@ p
 ```
 
 ## Time line series Biomass Consumed
-
+pipe plot of Year, Biomass consumed also add color
 ```{r, echo=FALSE}
 p <- data %>%
   ggplot( aes(x=Year, y= Biomass.Consumed..kg.)) +
