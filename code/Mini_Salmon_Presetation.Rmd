@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Context
+
 -Why Manage Salmon for wildlife?
 They are a Keystone species and they provide much needed Biomass for Bears.
 
@@ -24,9 +25,6 @@ Humans impact Bear habitat.(waterways, wetlands)
 
 -Why important 
 Manage Salmon for wildlife help maintain natures food web. Which is a network of complex interactions formed by the feeding relationships in various organisms in an ecosystem.
-
--Natural exchange
-In nature, Bear's avoid human contact. When biomass levels and other food sources become scarce Bears can scavenge nearby humans' territory. 
 
 
 ## Alaskan Bear
@@ -209,7 +207,8 @@ p
 
 ## Finding
 
-This presentation shows that bears benefit from the contribution of fisheries management in wildlife. Data indicated an increased food supply for Bears from 1997 through 2018, supported by fisheries management data showing a trending uptick of increased biomass (A Creek, C Creek, Hansen Creek, and Pedro Ponds). Furthermore, securing funding to support research and fisheries management to continue their studies and maintain salmon species in Alaska and the surrounding tributary help maintain Mother nature’s food web.
+This presentation shows that bears benefit from the contribution of fisheries management in wildlife. Managing fisheries for wildlife does not limit salmon consumption. Data indicated an increased food supply for Bears from 1997 through 2018, supported by fisheries management data showing a trending uptick of increased Biomass (A Creek, C Creek, Hansen Creek, and Pedro Ponds). 
+Furthermore, funding and continued supporting fisheries management studies of salmon species and tributary is essential in maintaining Mother nature’s food web.
 
 
 ## Citation 
