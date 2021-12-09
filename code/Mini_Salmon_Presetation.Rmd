@@ -160,7 +160,7 @@ ggplot(data, aes(x=Year, y=Biomass.Available..kg., color = Site)) +
 ```
 
 ## Scatter plot Biomass Available, Biomass Comsumed
-
+Scatter plot Biomass Available, Biomass Comsumed at each site
 ```{r, echo=FALSE}
 ggplot(data, aes(x=Biomass.Available..kg., y=Biomass.Consumed..kg., color = Site)) +
   geom_point()
